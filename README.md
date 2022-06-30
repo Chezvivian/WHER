@@ -74,4 +74,4 @@ create WHER features (Deletion-D, Insertion-I, Substitution-S, Shift-H) by count
 
 # Discussions and comments are welcome!
 
-If you are also interested in post-editing behaviors and the calculation of WHER, please feel free to contact me (vivian_huang@ruc.edu.cn) for details.
+If you are also interested in post-editing behaviors and the calculation of WHER, please feel free to contact me (vivian_huang@ruc.edu.cn) for a chat.
