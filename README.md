@@ -1,29 +1,38 @@
-# WHER
+# Introduction
 
 WHER (word-based human edit rate) is derived from TER (translation edit rate) in order to measure post-editors' effort on the word level.
 
+Huang, Jie, and Michael Carl. 2021. [“Word-Based Human Edit Rate (WHER) as an Indicator of Post-Editing Effort.”](https://www.researchgate.net/publication/353500040_Word-Based_Human_Edit_Rate_WHER_as_an_Indicator_of_Post-editing_Effort) pp. 39–55 in Explorations in Empirical Translation Process Research. Cham: Springer.
 
 # Step-by-step calculation of WHER
 
 ## 1. Prepare hypothesis and reference texts (in Python)
 
-import TER.py script and use functions (readCRITTables, writeSegments) to produce "hypothesis.txt" and "reference.txt"
+> Python script: [`TER_AVT.ipynb`](https://github.com/Chezvivian/WHER/blob/main/TER_AVT.ipynb)
+
+import [`TER.py`](https://github.com/Chezvivian/WHER/blob/main/TER.py) script and use functions (readCRITTables, writeSegments) to produce "hypothesis.txt" and "reference.txt"
 
 ## 2. Run perl script to calculate TER scores (in WSL)
 
-run script "tercom_v6b.pl" from Snover (https://www.cs.umd.edu/~snover/tercom/) to calculate TER scores.
+run script [`tercom_v6b.pl`](https://github.com/Chezvivian/WHER/blob/main/tercom_v6b.pl) from **[Snover et al. 2006](https://www.cs.umd.edu/~snover/tercom/)** to calculate TER scores.
 
 * NB: Through comparison, we finally chose to use the perl version of TER script. Although the Java version was updated more recently and was better supported (with bug fixes), only the output of perl-version script includes detailed editing features that can be easily extracted by regular expressions. That is the reason why we chose the older perl TER script.
 
 ## 3. Write TER scores to ST/SG tables and export refST.csv (in Python)
 
-use TER.py function (readTerScores) to extract the TER output from "hyp_ref/hypothesis.txt.sys.pra" file.
+> Continue in Python script: [`TER_AVT.ipynb`](https://github.com/Chezvivian/WHER/blob/main/TER_AVT.ipynb)
+
+use [`TER.py`](https://github.com/Chezvivian/WHER/blob/main/TER.py) function (readTerScores) to extract the TER output from "hyp_ref/hypothesis.txt.sys.pra" file.
 
 use TER.py function (addSGTerScores/addSTTerScores) to add the TER output to SG and ST tables as refSG and refST.
 
 export refST to a csv file.
 
 ## 4. extract word-level TER edits and create WHER features (in R)
+
+> R script: [`WHER.R`](https://github.com/Chezvivian/WHER/blob/main/WHER_20201123.R)
+
+use [`readCRITTables`](https://github.com/Chezvivian/WHER/blob/main/readTables.R) function to read data from the original .tt files from TPRDB
 
 import TER output as refST$TERed0.
 
