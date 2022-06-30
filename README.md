@@ -2,7 +2,7 @@
 
 WHER (word-based human edit rate) is derived from TER (translation edit rate) in order to measure post-editors' effort on the word level.
 
-Huang, Jie, and Michael Carl. 2021. [“Word-Based Human Edit Rate (WHER) as an Indicator of Post-Editing Effort.”](https://www.researchgate.net/publication/353500040_Word-Based_Human_Edit_Rate_WHER_as_an_Indicator_of_Post-editing_Effort) pp. 39–55 in *Explorations in Empirical Translation Process Research*. Cham: Springer.
+**Huang, Jie, and Michael Carl. 2021. [“Word-Based Human Edit Rate (WHER) as an Indicator of Post-Editing Effort.”](https://www.researchgate.net/publication/353500040_Word-Based_Human_Edit_Rate_WHER_as_an_Indicator_of_Post-editing_Effort) pp. 39–55 in *Explorations in Empirical Translation Process Research*. Cham: Springer.**
 
 # Step-by-step calculation of WHER
 
