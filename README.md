@@ -69,3 +69,9 @@ create WHER features (Deletion-D, Insertion-I, Substitution-S, Shift-H) by count
     LogCross: 0.30***
     HCross: 0.36***
 ```
+
+---
+
+# Discussions and comments are welcome!
+
+If you are also interested in post-editing behaviors and the calculation of WHER, please feel free to contact **[me](vivian_huang@ruc.edu.cn)** for details.
